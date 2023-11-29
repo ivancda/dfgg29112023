@@ -1,0 +1,359 @@
+<style>
+  .bordered {
+    border: 1px solid black;
+  }
+
+  .styleTypeNone {
+    list-style-type: none;
+  }
+
+  .lightGray {
+    background-color: #f3f3f3;
+  }
+
+  .lightBlue {
+    background-color: #cfe2f3;
+  }
+
+  /* .mainWrapper {
+    display: flex;
+    flex-direction: ;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  } */
+
+  .tableHeader{
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .tableTitle {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .titleCont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tableSubtitle {
+    font-size: 16px;
+  }
+
+  .colapseButton{
+    font-size: 40px;
+  }
+
+  .mainContent {
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+
+  .tableMain{
+    padding: 0px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+  }
+
+  .btnBox{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ctaColapse{
+    font-style: italic;
+    color: gray;
+  }
+
+</style>
+
+<div class="mainWrapper">
+  
+  <div class="tableOne tableMain">
+    <div class="tableHeader">
+      <div id="btnOne" class="titleCont">
+        <h4 class="tableTitle">Orders Table</h4>
+        <p class="ctaColapse">Click here to collapse/expand this tab</p>
+        <div class="btnBox">
+          <span id="hideOne" class="colapseButton">⬅</span>
+          <span id="showOne" class="colapseButton">⬇</span>
+        </div>
+      </div>
+    </div>
+
+    <div id="contentOne" class="mainContent">
+      <style type="text/css">
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-size:14px;
+          overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-size:14px;
+          font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-8rcp{background-color:#FFF;font-weight:bold;text-align:left;vertical-align:middle}
+        .tg .tg-t2qb{background-color:#F3F3F3;text-align:left;vertical-align:middle}
+        .tg .tg-z6fr{background-color:#CFE2F3;text-align:left;vertical-align:middle}
+        .tg .tg-9tpi{background-color:#CFE2F3;font-weight:bold;text-align:left;vertical-align:middle}
+        .tg .tg-zr06{background-color:#FFF;text-align:left;vertical-align:middle}
+        .tg .tg-hkjg{background-color:#F3F3F3;font-weight:bold;text-align:left;vertical-align:middle}
+      </style>
+      <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-z6fr" colspan="4" style="background-color: white;"><span style="font-weight:normal;">OrdersTable has all your orders updated daily. Eventually, Amazon breaks one customer order into two or more rows in the OrdersTable so that a complete order can constitute one or more rows. Defog adds some columns to the OrdersTable to help you create pivots and charts.</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-9tpi"><span style="font-weight:normal;background-color:#CFE2F3">Field</span></td>
+            <td class="tg-z6fr"><span style="font-weight:normal;background-color:#CFE2F3">What is it</span></td>
+            <td class="tg-z6fr"><span style="font-weight:normal;background-color:#CFE2F3">Data type or format</span></td>
+            <td class="tg-z6fr"><span style="font-weight:normal;background-color:#CFE2F3">Data range</span></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Order ID</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Sequential number of orders since when Defog retrieved order data from Amazon.[Column created by Defog.]</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Whole number</span></td>
+            <td class="tg-zr06"></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">Purchase Date Time</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Purchase date and time in UTC timezone as stored by Amazon.</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">MM/DD/YY HH:MM AM/PM</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">UTC timezone</span></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Last Updated Date Time</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">When Amazon last updated the order as stored by Amazon.</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">MM/DD/YY HH:MM AM/PM</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">UTC timezone</span></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">Amazon Order ID</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Amazon unique order identification code.</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">XXX-XXXXXX-XXXXXXXX</span></td>
+            <td class="tg-t2qb"></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Order Status</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Current order status.</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Four options</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Shipped, Cancelled, Pending, Shipping</span></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">Fulfillment Channel</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Order fulfillment channel.</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Two options</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Amazon, Merchant</span></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Sales Channel</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Amazon marketplace URL.</span></td>
+            <td class="tg-zr06"></td>
+            <td class="tg-zr06"></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">ASIN</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Order item ASIN code.</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">XXXXXXXXXX</span></td>
+            <td class="tg-t2qb"></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">SKU</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Order item SKU.</span></td>
+            <td class="tg-zr06"></td>
+            <td class="tg-zr06"></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">Quantity Ordered</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Order item quantity.</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Whole number</span></td>
+            <td class="tg-t2qb"></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Currency Code</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Order currency code.</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">3 letter code</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">USD, etc.</span></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">Item Price</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Order item price.</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Currency</span></td>
+            <td class="tg-t2qb"></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Item Tax</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Order item tax (when applicable).</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Currency</span></td>
+            <td class="tg-zr06"></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">Shipping Price</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Order item shipping price (when applicable).</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Currency</span></td>
+            <td class="tg-t2qb"></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Shipping Tax</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Order item shipping price (when applicable).</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Currency</span></td>
+            <td class="tg-zr06"></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">Gift Wrap Price</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Order item wrap price (when applicable).</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Currency</span></td>
+            <td class="tg-t2qb"></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Gift Wrap Tax</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Order item wrap tax (when applicable).</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Currency</span></td>
+            <td class="tg-zr06"></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">Item Promotion Discount</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Order item price discount (when applicable).</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Currency</span></td>
+            <td class="tg-t2qb"></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Shipping Promotion Discount</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Order item shipping discount (when applicable).</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Currency</span></td>
+            <td class="tg-zr06"></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">Shipping Service Level</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Order item shipping service.</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Four options</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Expedited, NextDay, SecondDay, Standard</span></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">City</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Order item shipping city.</span></td>
+            <td class="tg-zr06"></td>
+            <td class="tg-zr06"></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">State</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Order item shipping state.</span></td>
+            <td class="tg-t2qb"></td>
+            <td class="tg-t2qb"></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Postal Code</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Order item shipping postal code.</span></td>
+            <td class="tg-zr06"></td>
+            <td class="tg-zr06"></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">Country</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Order item shipping country.</span></td>
+            <td class="tg-t2qb"></td>
+            <td class="tg-t2qb"></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Promotion ID</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Order item promotion identification code.</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Many different options</span></td>
+            <td class="tg-zr06"></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">Item Status</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Order item status.</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Three options</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Cancelled, Shipped, Unshipped</span></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Purchase Date (PT)</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Purchase date in PT timezone. Amazon Seller Central interface displays information in the Pacific timezone (PT).&nbsp;&nbsp;[Column created by Defog from the Purchase Date Time.]</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">MM/DD/YY</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">PT timezone</span></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">Purchase Month Year (PT)</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Purchase month-year in PT timezone. [Column created by Defog from the Purchase Date Time.]</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">MM/01/YY</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">PT timezone</span></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Purchase Year (PT)</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Purchase year in PT timezone. [Column created by Defog from the Purchase Date Time.]</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">AAAA</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">PT timezone</span></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">Purchase Day of Week (PT)</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Puchase day of the week in PT timezone. [Column created by Defog from the Purchase Date Time.]</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Number between 0 (Monday) and 6 (Sunday)</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">PT timezone</span></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Purchase Hour (PT)</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Purchase hour in PT timezone. [Column created by Defog from the Purchase Date Time.]</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">HH (24 hour format)</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">PT timezone</span></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">Purchase Week Number (PT)</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Purchase week of the year in PT timezone. [Column created by Defog from the Purchase Date Time.]</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Number between 1 and 53.</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">PT timezone</span></td>
+          </tr>
+          <tr>
+            <td class="tg-8rcp"><span style="font-weight:bold;background-color:#FFF">Customer ID</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">Amazon's unique customer identification code.</span></td>
+            <td class="tg-zr06"><span style="font-weight:normal;background-color:#FFF">XXXXXXXXXXXXXXX</span></td>
+            <td class="tg-zr06"></td>
+          </tr>
+          <tr>
+            <td class="tg-hkjg"><span style="font-weight:bold;background-color:#F3F3F3">load_update_datetime</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">Date and time Defog added or updated the row. [Column created by Defog to keep track of the daily updates.]</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">MM/DD/YY HH:MM AM/PM</span></td>
+            <td class="tg-t2qb"><span style="font-weight:normal;background-color:#F3F3F3">EST timezone</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+</div>
+
+<script>
+
+  const btnOne = document.getElementById('btnOne')
+  const hideOne = document.getElementById('hideOne')
+  const showOne = document.getElementById('showOne')
+  const contentOne = document.getElementById('contentOne')
+
+  function displayContent(hideBtn, showBtn, content) {
+    
+    if(content.style.display === 'block'){
+      content.style.display = 'none'
+      showBtn.style.display = 'block'
+      hideBtn.style.display = 'none'
+    }
+    else{
+      content.style.display = 'block'
+      showBtn.style.display = 'none'
+      hideBtn.style.display = 'block'
+    }
+
+  }
+
+  contentOne.style.display = 'block'
+  showOne.style.display = 'none'
+
+  btnOne.addEventListener('click', () => displayContent(hideOne, showOne, contentOne))
+
+</script>
